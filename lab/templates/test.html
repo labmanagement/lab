@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row banner1">
+  <div class="col-md-12">
+    
+    <h3>Tests</h3> 
+      
+    </div>
+    <div class="row p-4">
+    {% for b in t %}
+    <div class="col-md-6" data-aos="zoom-in">
+    <div class="col-md-12 p-3 tests mb-5 shadow" >
+      <a href="/testdetail/{{ b.id }}" class="text-decoration-none text-dark">
+        <h4  class="text-light">{{ b.name }}</h4>
+        <img src="/media/{{ b.photo }}"width="100%" height="350">
+       </a>
+      </div>      
+    </div>
+
+    
+{% endfor %}
+</div>
+</div>
+{% endblock %}

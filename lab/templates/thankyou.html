@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row shadow">
+  <div class="col-md-12 p-5 text-center ">
+    <div class="col-md-8 offset-2 bg-info text-light p-5">
+        <img src="{% static 'success.png' %}" height="100" width="100" />
+    <h1>Thank you for booking. Your appointment is confirmed after payment . We will contact you soon.</h1>
+    <form action="{% url 'payment' %}" method='POST'>
+      {% csrf_token %}
+    <input type="hidden" name="name" value="{{ i.Name }}">
+    <input type="hidden" name="provider_order_id" value="{{ i.id }}">
+    <input type="hidden" name="amount" value="100">
+    <input type="hidden" name="bookingid" value="{{ i.id }}">
+    <button class="btn btn-info">Pay Now</button>
+    </form>
+</div>
+  </div>
+</div>
+
+    {% endblock %}

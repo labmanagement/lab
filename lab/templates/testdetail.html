@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+  <div class="col-md-12 ">
+    
+    <h2>{{ t.name }}</h2>
+    </div>
+    </div>
+    <div class="row p-5">
+  
+    <div class="col-md-6 p-3 tests">
+        
+        
+        <img src="/media/{{ t.photo }}"width="500" height="400">
+        <p><span class="text-info fw-bold">PackageIncludes:</span>{{ t.PackageIncludes }}</p>
+        </div>
+        <div class="col-md-6 ps-4">
+        <p><span class="text-info fw-bold">description: </span>{{ t.description |safe }}</p>
+        <p><span class="text-info fw-bold">Sample Type: </span> {{ t.sampleType }}</p>
+        <p><span class="text-info fw-bold">Fasting Required: </span>{{ t.FastingRequirement }}</p>
+        <p><span class="text-info fw-bold">Tube Type:</span> {{ t.TubeType }}</p>
+        <p><span class="text-info fw-bold">Reports:</span> {{ t.Reports }}</p>
+        <h3 class="mt-5"><span class="p-3 border border-danger">&#8377;{{ t.price }}</span></h3>
+      </div>      
+</div>
+
+    {% endblock %}

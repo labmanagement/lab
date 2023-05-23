@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row banner3">
+   <div class="col-md-12">
+     <h2 class="text-light">Lab</h2>
+   </div>
+
+ {% for b in lb %}
+ <div class="row p-5" data-aos="flip-up">
+  <div class="col-md-6" >
+    
+    <iframe src="{{ b.Location}}" width="100%" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
+
+   <div class="col-md-6 shadow">
+    <h4 class="text-light">{{ b.name}}</h4>
+    <h5 class="text-light">{{ b.Address}}</h5>
+    <img src="/media/{{ b.photo }}" width="100%" height="200">
+  </div>
+  </div>
+  
+ {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row p-s b4">
+    <div class="col-md-6 offset-3 ps-4 shadow">
+        <h3>Book your Appointment</h3>
+        <form action="/insertAppointment/"method="post">
+            {% csrf_token %}
+            <label>Select Test</label>
+            <select class="form-control" name="Testid">
+                <option value="">-select-</option>
+                {% for t in t %}
+                <option value="{{ t.id }}">{{ t.name }}</option>
+                {% endfor %}
+            </select>
+            <label>Name</label>
+            <input type="text" class="form-control" name="Name"/>
+            <label>Date of Birth</label>
+            <input type="date" class="form-control" name="DOB" />
+            <label>Gender</label>
+            <br>
+            <input type="radio" name="Gender" value="Female"/>
+            <label>Female</label>
+            <input type="radio" name="Gender" value="Male"/>
+            <label>Male</label>
+            <br>
+            <label>Phone No</label>
+            <input type="text" class="form-control"maxlength="10" name="PhoneNo">
+            <label>Appointment date</label>
+            <input type="date" class="form-control" name="Appointmentdate"/>
+            <label>Appointment time</label>
+            <input type="time" class="form-control" name="Appointmenttime"/>
+           
+            <input type="hidden"  id="date" class="form-control" name="Bookingdate"/>
+            <label>Select Lab</label>
+            <select class="form-control" name="Labid"> 
+            <option value="">-select-</option>
+            {% for t in l %}
+            <option value="{{ t.id }}">{{ t.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").value = d + "-" + m + "-" + y;
+    </script>
+{% endblock %}

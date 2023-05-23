@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row p-3 banner1">
+    <div class="col-md-12 ps-3">
+        <h1>FAQ</h1>
+    </div>
+
+    {% for b in F %}
+    <div class="col-md-12">
+        <h4>{{ b.question }}</h4>
+        <p>{{ b.answer}}</p>
+
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

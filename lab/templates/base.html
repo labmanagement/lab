@@ -1,0 +1,151 @@
+{% load static %}
+<html>
+    <head>
+        <title> Lab Management</title>
+        <link href="{% static 'css/bootstrap.min.css'%}"rel="stylesheet"/>
+        <link href="{% static 'css/bootstrap-grid.min.css'%}"rel='stylesheet'/>
+        <link href="{% static 'style.css'%}"rel='stylesheet'/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="{% static 'jquery.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script> 
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script> 
+        <link href="{% static 'aos-master/dist/aos.css' %}" rel="stylesheet">
+        <script src="{% static 'aos-master/dist/aos.js' %}"></script>
+        <script>
+            $(document).ready(function(){
+
+            
+            AOS.init();
+        });
+          </script>
+    </head>
+    <body>
+         <div class="container-fluid">
+            <div class="row bgblue text-light p-2" id="topheader">
+                
+                    <div class="col-md-10 ps-2 ">
+                <i class="fa-solid fa-phone-volume text text-success"></i>
+                <span>emergency line:(002)0106124741</span>
+                &nbsp;&nbsp;
+                <i class="fa-solid fa-location-dot text-success"></i>
+                <span>location:Bathinda</span>
+                &nbsp;&nbsp;
+                <i class="fa fa-clock text-success"></i>
+                <span>mon-fri:8am-7pm</span>
+                &nbsp;&nbsp;
+                </div>
+                
+                </div>
+<!--row end-->
+<div class="row p-2"id="header">
+    <div class="col-md-3 ps-1">
+        <img src="../../static/logo (3).png" width="200px" alt="">
+    </div>
+      <div class="col-md-7" data-aos="flip-left">
+        <nav id="nav">
+            <ul class="nav">
+        <a href="/Home/"class="nav-link fw-bold">Home</a>
+        <a href="/About Us/"class="nav-link fw-bold">About Us</a>
+        <a href="/test/"class="nav-link fw-bold">Test</a>
+        <a href="/Services/"class="nav-link fw-bold">Services</a>
+        <a href="/Appointment/"class="nav-link fw-bold">Appointment</a>
+        <a href="/blog/"class="nav-link fw-bold">Blog</a>  
+        <a href="/Labs/"class="nav-link fw-bold">Labs</a>
+        <a href="/FAQ/"class="nav-link fw-bold">FAQS</a>
+        <a href="/contact/"class="nav-link fw-bold">Contacts</a>
+        {% if user.is_authenticated %}
+        <a href="/PatientReports/"class="nav-link fw-bold">My Reports</a>
+        <a href="/logout/"class="nav-link fw-bold">logout</a>
+        {% else %}
+        <a href="/signup/"class="nav-link fw-bold">register</a>
+        <a href="/login/"class="nav-link fw-bold">login</a>
+        {% endif %}
+      
+        </ul>
+        </nav>
+    </div>
+</div>
+<!--row end-->
+
+{% block content %}
+{% endblock %}
+
+
+<div class="row p-3 bgblue" id="footer" style="background-color: rgb(3, 3, 54); color: white;">
+    <div class="col-md-3 ps-5">
+      <img src="{% static 'logo-footer-white.webp' %}" width="90%"  />
+     
+    </div>
+      
+        
+        <div class="col-md-4 ps-5">
+            <h3>Tests & Services</h3>
+            <nav id="nav">
+               <ul class="nav">
+                   
+                   <a href="/GeneralDiagnosticTesting/"class="nav-link text-light">GeneraDiagnostic Testing</a>
+                   <a href="/Specialized Genetic Testing/"class="nav-link text-light">Specialized Genetic Testing</a>
+                   <a href="/Food Sensitivity Testing/"class="nav-link text-light">Food Sensitivity Testing</a>
+                   <a href="/Genova Diagnostics Testing/"class="nav-link text-light">Genova Diagnostics Testing</a>
+                   <a href="/Hormone Insights Testing/"class="nav-link text-light">Hormone Insights Testing</a>
+                   <a href="/Naturopathic Lab Testing/"class="nav-link text-light">Naturopathic Lab Testing</a>
+               </ul>
+            </nav> 
+        </div>
+        <div class="col-md-2 ps-5">
+            <h3>Links</h3>
+            <nav id="nav">
+               
+                   
+                   <a href="/About Us/"class="nav-link text-light">About Us</a>
+                   <a href="/Services/"class="nav-link text-light">Services</a>
+                   <a href="/test/"class="nav-link text-light">Test</a>
+                   <a href="/Labs/"class="nav-link text-light">Labs</a>
+                   <a href="/contact/"class="nav-link text-light">contact</a>
+                   
+             
+            </nav> 
+        </div>
+        <div class="col-md-3 ps-4">
+            <h3>Quick Contact</h3>
+            <p>If You have any questions or need<br>help,feel free to contact with our <br>team.</p>
+
+            send Us Email: <br>
+            <i class="fa-solid fa-envelope"></i>
+            <span class="text-success  fw-bold">info@cmssuperhero...</span><br>
+
+
+            Call Us Today:<br>
+            <i class="fa-solid fa-phone"></i>
+            <span class="text-success fw-bold">02011061245741</span>
+        </div>
+
+        </div>
+   
+    
+
+   </div>
+
+   </div>
+   
+    </body>
+    <script src="{% static 'aos-master/dist/aos.js'%}"></script>
+           <script>
+              AOS.init();
+              $(document).ready(function() {
+
+$('.counter').each(function () {
+$(this).prop('Counter',0).animate({
+Counter: $(this).text()
+}, {
+duration: 4000,
+easing: 'swing',
+step: function (now) {
+    $(this).text(Math.ceil(now));
+}
+});
+});
+
+}); 
+                </script>
+</html>

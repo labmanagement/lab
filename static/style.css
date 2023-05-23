@@ -1,0 +1,101 @@
+.bgblue{
+    background: #00277a;
+}
+.textblue{
+    color:#00277a;
+}
+.bggreen{
+    background: #21cdad;
+}
+.textgreen{
+    color:#21cdad;
+}
+#nav a{
+    color:black;
+}
+.carousel-caption{
+    bottom:190px !important;
+}
+
+#partners img{
+    height:60px; 
+    width: 200px;
+    margin-right:40px;
+}
+.text-primary{
+    color:#00277a !important;
+}
+.btnnew:hover{
+    background:#fff;
+    color: #00277a;
+    border: 1px solid #00277a;
+}
+.banner{
+    background: url('b1.jpg');
+    padding: 100px;
+    background-position: center;
+    background-size: cover;
+    
+}
+.banner1{
+    background: url('b2.jpg');
+    background-blend-mode:darken;
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+  
+}
+.banner2{
+    background: url('a3.jpg');
+    background-blend-mode:darken;
+    padding: 80px;
+    background-position: center;
+    background-size: cover;
+  
+}
+.banner3{
+    background: url('b5.jpg');
+    background-blend-mode:darken;
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+}
+.banner4{
+    background: url('a2.jpg');
+    background-blend-mode:darken;
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+}
+.banner5{
+    background: url('b8.jpg');
+    background-blend-mode:darken;
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+}
+.banner6{
+    background: url('b7.jpg');
+    background-blend-mode:darken;
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+}
+.banner7{
+    background: url('ss1.jpg');
+    background-blend-mode:darken;
+    padding: 100px;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+
+.banner4{
+    background: rgba(255,255,255,0.5);
+    font-weight: bold;
+}
+.circle{
+    border-radius: 100px;
+}
